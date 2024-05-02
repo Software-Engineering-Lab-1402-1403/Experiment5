@@ -1,7 +1,9 @@
+import java.util.HashSet;
 
 public class B {
 
     private static B instance;
+    HashSet<Integer> set = new HashSet<Integer> ();
 
     public static B getInstance() {
         if (instance == null)
@@ -9,13 +11,15 @@ public class B {
         return instance;
     }
 
-    public void doJobB() {
-        sleepMethodB();
+    public void doContainsB() {
+        for (int i = 10001; i < 30000; i++) {
+            getInstance().set.contains(i);
+        }
     }
 
-    private void sleepMethodB() {
-        for (int i = 0; i < 1000; i++) {
-            Utils.sleepUninterrruptable(0.001);
+    public void constructB() {
+        for (int i = 0; i < 10000; i++) {
+            getInstance().set.add(i);
         }
     }
 
