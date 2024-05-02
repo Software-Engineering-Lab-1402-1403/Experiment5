@@ -12,8 +12,10 @@ public class B {
     }
 
     public void doContainsB() {
-        for (int i = 10001; i < 30000; i++) {
-            getInstance().set.contains(i);
+        for (int j = 0; j < 10000; j++) {
+            for (int i = 10001; i < 50000; i++) {
+                getInstance().set.contains(i);
+            }
         }
     }
 

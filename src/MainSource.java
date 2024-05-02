@@ -5,8 +5,10 @@ public class MainSource {
     public static void main(String[] args) throws IOException {
         prompt("Start Construct");
         A.getInstance().constructA();
+        B.getInstance().constructB();
         prompt("Start Find");
         A.getInstance().doContainsA();
+        B.getInstance().doContainsB();
         prompt("Finish");
     }
 

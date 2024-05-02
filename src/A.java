@@ -14,8 +14,10 @@ public class A {
     }
 
     public void doContainsA() {
-        for (int i = 10001; i < 30000; i++) {
-            getInstance().array.contains(i);
+        for (int j = 0; j < 100; j++) {
+            for (int i = 10001; i < 50000; i++) {
+                getInstance().array.contains(i);
+            }
         }
     }
 
