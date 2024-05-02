@@ -5,6 +5,7 @@ import java.util.zip.CRC32;
 public class A {
 
     private static A instance;
+    ArrayList<Integer> array = new ArrayList<Integer>();
 
     public static A getInstance() {
         if (instance == null)
@@ -12,26 +13,15 @@ public class A {
         return instance;
     }
 
-    private String randomHash() {
-        CRC32 crc32 = new CRC32();
-        crc32.reset();
-        crc32.update((int) (Math.random() * 255));
-        return String.format("%08X", crc32.getValue()); // e.g. AABBCCDD
+    public void doContainsA() {
+        for (int i = 10001; i < 30000; i++) {
+            getInstance().array.contains(i);
+        }
     }
 
-    public void doJobA() {
-        produceGarbage();
-        sleepMethodA();
-    }
-
-    private void sleepMethodA() {
-        Utils.sleepUninterrruptable(1);
-    }
-
-    private void produceGarbage() {
-        List<String> list = new ArrayList<>();
-        for (int i = 0; i < 1000; i++) {
-            list.add(randomHash());
+    public void constructA() {
+        for (int i = 0; i < 10000; i++) {
+            getInstance().array.add(i);
         }
     }
 
